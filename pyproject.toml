@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "local-ai"
+version = "0.1.0"
+description = "A simple local AI chatbot built from (almost) scratch."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "L. Casey B.", email = "liam@lcb-dev.biz" }]
+dependencies = []   # Minimal for now.
