@@ -7,7 +7,56 @@ name = "local-ai"
 version = "0.1.0"
 description = "A simple local AI chatbot built from (almost) scratch."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 license = { text = "MIT" }
 authors = [{ name = "L. Casey B.", email = "liam@lcb-dev.biz" }]
 dependencies = []   # Minimal for now.
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "ruff",
+  "mypy",
+]
+ml = [
+  "numpy",
+  "scikit-learn",
+]
+api = [
+  "fastapi",
+  "uvicorn[standard]",
+]
+
+[project.scripts]
+local-ai = "local_ai.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/local_ai"]
+
+[tool.black]
+line-length = 100
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.13"
+warn_unused_ignores = true
+check_untyped_defs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
