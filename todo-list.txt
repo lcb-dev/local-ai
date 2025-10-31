@@ -1,0 +1,3 @@
+DAY 1:
+ - Project setup: pyproject.toml
+ - Logging: Setup robust logging foundation, for lifecycle, state changes, errors, warnings and performance.
