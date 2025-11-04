@@ -21,7 +21,7 @@ def logging_setup():
     # Logger should change base config depending on runtime mode. 
     # dev: Should be level "DEBUG"
     # test: Should be level "INFO" 
-    # prod: Sould be level "ERROR/CRITICAL"
+    # prod: Sould be level "ERROR"
     runtime_mode = get_run_mode()
     logging_level = None
     if runtime_mode.mode == "dev":
@@ -33,13 +33,13 @@ def logging_setup():
     else:
         logging_level = logging.CRITICAL
 
-
     logging.basicConfig(
         filename="local_ai.log", 
         format='(%(asctime)s) [%(filename)s:%(funcName)s:%(levelname)s]:: %(message)s', 
         datefmt='%d/%m/%Y %I:%M:%S %p', 
         level=logging_level)
     logger.info("Main logger initialized.")
+
     log_default_run_environment()
 
 def log_default_run_environment():
