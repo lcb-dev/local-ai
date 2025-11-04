@@ -3,3 +3,9 @@
         - Project setup: pyproject.toml
         - Logging: Setup robust logging foundation, for lifecycle, state changes, errors, warnings and performance.
         
+    [DAY 2]:
+        - Prompt user for input
+        - Text normalization - handle inputs.
+        - Pass input to simple processing function
+        - Output a quick response
+        - Log each step.

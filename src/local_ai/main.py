@@ -2,6 +2,7 @@ import logging
 import argparse
 import sys, os
 import toml
+from .bot.core import process_input
 
 logger = logging.getLogger(__name__)
 
@@ -39,8 +40,23 @@ def logging_setup():
         datefmt='%d/%m/%Y %I:%M:%S %p', 
         level=logging_level)
     logger.info("Main logger initialized.")
-
     log_default_run_environment()
+
+    # Begin actual commuinication loop:
+    chat_loop()
+
+def chat_loop():
+    logger.info("Entering main chat loop.")
+    try:
+        while True:
+            user_input = input("Enter your message> ")
+            process_input(user_input)
+    except KeyboardInterrupt:
+        print("Exiting...")
+        exit()
+    except Exception:
+        print("Error occured!")
+        
 
 def log_default_run_environment():
     """
