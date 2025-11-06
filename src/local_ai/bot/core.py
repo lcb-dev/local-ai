@@ -1,4 +1,5 @@
 import unicodedata
+import string
 
 """
 Handler for processing user input.
@@ -24,5 +25,10 @@ def sanitize_input(input_string: str) -> str:
     user_text = input_string.lower() # Convert to lowercase.
     user_text = unicodedata.normalize('NFC', user_text) # Normalize..
     user_text = user_text.strip() # Remove leading and trailing whitespace.
-    print(user_text)
-    return user_text
+
+    # Clear punctuation.
+    translator = str.maketrans('', '', string.punctuation)
+    cleaned_user_text = user_text.translate(translator) 
+    
+    print(cleaned_user_text)
+    return cleaned_user_text

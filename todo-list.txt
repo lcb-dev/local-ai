@@ -9,3 +9,8 @@
         - Pass input to simple processing function
         - Output a quick response
         - Log each step.
+    
+    [DAY 3]:
+        - Tokenize inputs
+        - Convert normalized text into a list of tokens
+        - Offset relative to input string. 
