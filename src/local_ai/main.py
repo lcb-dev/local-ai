@@ -27,9 +27,9 @@ def logging_setup():
     logging_level = None
     if runtime_mode.mode == "dev":
         logging_level = logging.DEBUG
-    elif runtime_mode == "test":
+    elif runtime_mode.mode == "test":
         logging_level = logging.INFO
-    elif runtime_mode == "prod":
+    elif runtime_mode.mode == "prod":
         logging_level = logging.ERROR
     else:
         logging_level = logging.CRITICAL
