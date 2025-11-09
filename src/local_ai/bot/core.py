@@ -12,7 +12,7 @@ def process_input(user_text: str) -> str:
     3. Output the response!
     """
     user_text = sanitize_input(user_text)
-    pass
+    return user_text
 
 def sanitize_input(input_string: str) -> str:
     """

@@ -52,7 +52,7 @@ indent-style = "space"
 
 [tool.pytest.ini_options]
 addopts = "-q"
-testpaths = ["tests"]
+testpaths = ["src/tests"]
 
 [tool.mypy]
 python_version = "3.13"

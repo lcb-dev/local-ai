@@ -1,16 +1,23 @@
 [[ WEEK 1 - Foundations and setup ]]
-    [DAY 1]:
+    [DAY 1 - DONE]:
         - Project setup: pyproject.toml
         - Logging: Setup robust logging foundation, for lifecycle, state changes, errors, warnings and performance.
         
-    [DAY 2]:
+    [DAY 2 - DONE]:
         - Prompt user for input
         - Text normalization - handle inputs.
         - Pass input to simple processing function
         - Output a quick response
         - Log each step.
     
-    [DAY 3]:
+    [DAY 3 - DONE]:
         - Tokenize inputs
         - Convert normalized text into a list of tokens
         - Offset relative to input string. 
+        - Setup testing for Tokenizer API  
+
+    [DAY 4]:
+        - Combine components from previous parts to form a simple text processing pipeline.
+        - Raw input text -> normalize -> tokenize 
+
+    

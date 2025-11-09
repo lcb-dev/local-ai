@@ -1,6 +1,5 @@
 from typing import List, Optional, Literal
 from dataclasses import dataclass
-from warnings import deprecated
 import re
 
 TokenMode = Literal["whitespace", "wordpunct"]
@@ -11,7 +10,7 @@ class Token:
     text: str
     start: int
     end: int
-    ttype: Optional[str] = None
+    type: Optional[str] = None
 
 TokenSeq = List[Token]
 _wordpunct_pattern = re.compile(
